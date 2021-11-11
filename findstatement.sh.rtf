@@ -1,0 +1,44 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red64\green11\blue217;\red0\green0\blue0;\red46\green174\blue187;
+\red180\green36\blue25;\red193\green101\blue28;\red200\green20\blue201;\red158\green76\blue4;\red224\green228\blue9;
+}
+{\*\expandedcolortbl;;\cssrgb\c32308\c18668\c88227;\csgray\c0;\cssrgb\c20196\c73240\c78250;
+\cssrgb\c76409\c21698\c12524;\cssrgb\c80553\c47366\c13835;\cssrgb\c83396\c23075\c82664;\cspthree\c64447\c38835\c13142;\cssrgb\c90000\c90000\c0;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 #!/bin/bash\cf3 \
+\cf2 #Mahi Berhanu\cf3 \
+\cf2 #mberhanu2@student.gsu.edu\cf3 \
+\cf2 #search for number of sentence\cf3 \
+\cf4 function\cf3  \cf4 statements()\{\cf3 \
+ \cf4 i\cf3 =\cf5 0\cf3 \
+        \cf2 # set the input field separator as .\cf3 \
+        \cf6 while \cf7 IFS\cf6 =. read -r -a line\cf3 \
+\cf6         do\cf3 \
+        \cf7 IFS\cf6 =\cf5 "."\cf3 \
+                \cf2 # Iterate over each elements\cf3 \
+                \cf6 for\cf3  sentence \cf6 in\cf3  \cf7 $\{line[\cf3 @\cf7 ]\}\cf3 \
+                \cf6 do\cf3 \
+                        statements\cf6 [\cf3 i\cf6 ]=\cf7 $(\cf8 \cb9 echo\cf5 \cb1  \cf7 $sentence\cf5  \cf7 | \cf6 sed\cf7  \cf6 '\cf5 s/^ //g\cf6 '\cf7 )\cf3 \
+                        \cf2 # Increment counter\cf3 \
+                        \cf4 i\cf3 =\cf7 $((i+\cf5 1\cf7 ))\cf3 \
+                \cf6 done\cf3 \
+        \cf6 done\cf3  \cf6 <\cf3  \cf7 $1\cf3 \
+\
+        \cf8 \cb9 echo\cf5 \cb1  \cf6 "\cf5 There number of statements is:  \cf7 $\{#statements[\cf3 @\cf7 ]\}\cf6 "\cf3 \
+\cf6 for\cf3  sentence \cf6 in\cf3  \cf7 $\{statements[\cf3 @\cf7 ]\}\cf3 \
+        \cf6 do\cf3 \
+           \cf2 # Count\cf3 \
+           \cf4 words\cf3 =\cf7 $(\cf8 \cb9 echo\cf5 \cb1  \cf7 $sentence\cf5  \cf7 | wc -w)\cf3 \
+           \cf4 letters\cf3 =\cf7 $(\cf8 \cb9 echo\cf5 \cb1  \cf7 $sentence\cf5  \cf7 | tr -d \cf6 '\cf5  \cf6 '\cf7  | wc -c)\cf3 \
+           \cf2 #Display count\cf3 \
+           \cf8 \cb9 echo\cf5 \cb1  -e \cf6 "\cf5 Statement \cf7 $i\cf5 :\cf7 \\t\cf5   \cf7 $words\\t\cf5   \cf7 $((\cf3 letters\cf5 -1\cf7 ))\cf6 "\cf3 \
+           \cf2 # Increment\cf3 \
+           \cf4 i\cf3 =\cf7 $((i+\cf5 1\cf7 ))\cf3 \
+        \cf6 done\cf3 \
+\cf4 \}\cf3 \
+\cf4 file_search\cf3 =\cf6 "\cf5 myexamfile.txt\cf6 "\cf3 \
+statements  \cf7 $file_search}
