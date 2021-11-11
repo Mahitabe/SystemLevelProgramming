@@ -1,0 +1,55 @@
+﻿Mahi Berhanu
+Lab 2 Out-of-lab Assignment 
+
+
+  224  cd ~
+  225  cd Lab2_P2
+  226  ls
+  227  cd ~
+  228  cp Lab2_P2 Lab2
+  229  cd Lab2_P2
+  230  pwd
+  231  cd ~
+  232  cp /home/mberhanu2/Lab2_P2 /home/mberhanu2/public/Submission/Lab2
+  233  cp -r Lab2_P2 /home/mberhanu2/public/Submission/Lab2
+  234  cd ~
+  235  ls
+  236  cd public
+  237  cd Submission 
+  238  cd Lab2
+  239  ls
+  240  cd ~
+  241  cd Lab2_P2
+  242  ls 
+  243  rm RealEstate.csv
+  244  ls
+  245  cd ~
+  246  rmdir Lab2_P2
+  247  hisotry 
+  248  history
+  249  cd ~
+  250  mkdir Lab2_P2
+  251  cd Lab2_P2
+  252  cp /home/bbello1/public/RealEstate.csv .
+  253  ls
+  254  cat RealEstate.csv
+  255  head -3 RealEstate.csv
+  256  wc RealEstate.csv
+  257  cat -n RealEstate.csv
+  258  mkdir /home/mberhanu2/public
+  259  cp RealEstate.csv /home/mberhanu2/public/myRealEstate.csv
+  260  pwd
+  261  ls /home/mberhanu2/public
+  262  cd /home/mberhanu2/public
+  263  mkdir ./Others
+  264  mkdir ./Submission
+  265  mkdir ./Submission/Lab1 
+  266  mkdir ./Submission/Lab2
+  267  mv ./Others Regular
+  268  mv ./Regular Others
+  269  cp /home/mberhanu2/Lab2_P2 ./Others
+  270  cp /home/mberhanu2/Lab2_P2 ./Submission/Lab2
+  271  cp ../Lab2_P2 ./Submission/Lab2
+  272  cp -r /home/mberhanu2/Lab2_P2 ./Submission/Lab2
+  273  rm -r /home/mberhanu2/Lab2_P2
+  274  history
