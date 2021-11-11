@@ -3,4 +3,4 @@ The .c files can be executed on any IDE that handles c programming or it can be 
 For the terminal, compile the program using gcc -o filename filename.c and execute using ./filename
 For IDE simply compile using the complie button and run the program 
 
-For the .sh files, 
+For the .sh files, change the permission setting using chmod a+x filename.sh and run using ./filename.sh
